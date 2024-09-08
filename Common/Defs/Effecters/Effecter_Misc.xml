@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EffecterDef>
+    <defName>RNS_IncenseBurner</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+        <soundDef>FireBurning</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>RNS_IncenseSmoke</fleckDef>
+        <scale>0.5~0.7</scale>
+        <positionOffset>(0, 0, 0.5)</positionOffset>
+        <positionRadius>0.35</positionRadius>
+        <angle>30~60</angle>
+        <rotationRate>-10~10</rotationRate>
+        <speed>0.1~0.3</speed>
+        <chancePerTick>0.05</chancePerTick>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

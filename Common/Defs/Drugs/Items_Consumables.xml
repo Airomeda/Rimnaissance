@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- === Early Remedy === -->
+
+  <!-- Herbacyline -->
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>RNS_Herbacyline</defName>
+    <label>herbacyline</label>
+    <description>A herbalic mush for preventing infections before they take hold, hardened for longer preservation. Blocks malaria, sleeping sickness, plague. Must be taken every four days to remain effective.\n\nThis mush only prevents new infections. It does not cure existing infections - even those that are not yet discovered. It is only effective when consumed in under a month.</description>
+    <descriptionHyperlinks>
+      <HediffDef>PenoxycylineHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Herbacyline</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <possessionCount>10</possessionCount>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <Flammability>0.7</Flammability>
+      <MarketValue>14</MarketValue>
+      <Mass>0.005</Mass>
+      <WorkToMake>1200</WorkToMake>
+    </statBases>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PenoxycylineHigh</hediffDef>
+          <severity>0.8</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>RNS_IntermediateRemedy</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>RNS_AlchemyRefinery</li>
+        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15.0</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Go-Potion -->
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>RNS_GoPotion</defName>
+    <label>go-potion</label>
+    <description>A performance-enhancing potion brewed for elite guards during the early days of hundred years warfare. Go-potion blocks pain, increases movement speed, and improves the user's melee and shooting abilities.\n\nThe military alchemist who created it were never able to remove its addictiveness. Some saw this as a downside; others saw it as a benefit. It is only effective when consumed in under a week.</description>
+    <descriptionHyperlinks>
+      <HediffDef>GoJuiceHigh</HediffDef>
+      <HediffDef>GoJuiceAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoPotion</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>42</MarketValue>
+      <Mass>0.1</Mass>
+      <WorkToMake>3000</WorkToMake>
+    </statBases>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.40</joy>
+      <drugCategory>Hard</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GoJuiceHigh</hediffDef>
+          <severity>0.4</severity>
+          <toleranceChemical>GoJuice</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.35</offset>
+          <toleranceChemical>GoJuice</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+          <offset>0.15</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>RNS_IntermediateRemedy</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>RNS_AlchemyRefinery</li>
+        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+      <skillRequirements>
+        <Cooking>8</Cooking>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <PsychoidLeaves>12</PsychoidLeaves>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>GoJuice</chemical>
+        <addictiveness>0.026</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>7.0</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>RNS_WakeSoup</defName>
+    <label>wake-soup</label>
+    <description>A specially brewed soup that tastes very bitter. Wake-soup fills the user's need for rest, allowing them to work for extended periods without getting tired. However, drinking wake-soup runs the risk of developing an addiction. It is only effective when consumed in under a couple days.</description>
+    <descriptionHyperlinks>
+      <HediffDef>WakeUpHigh</HediffDef>
+      <HediffDef>WakeUpAddiction</HediffDef>
+      <HediffDef>HeartAttack</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/WakeSoup</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>30</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.40</joy>
+      <drugCategory>Hard</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>WakeUpHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>WakeUp</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>1.0</offset>
+          <toleranceChemical>WakeUp</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>RNS_IntermediateRemedy</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>RNS_AlchemyRefinery</li>
+        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <PsychoidLeaves>8</PsychoidLeaves>
+      <SmokeleafLeaves>8</SmokeleafLeaves>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>WakeUp</chemical>
+        <addictiveness>0.02</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.75</needLevelOffset>
+        <listOrder>210</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>3.0</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

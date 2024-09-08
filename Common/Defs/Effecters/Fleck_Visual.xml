@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>RNS_IncenseSmoke</defName>
+    <graphicData>
+      <texPath>Things/Mote/Smoke</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <growthRate>0.01</growthRate>
+    <fadeInTime>0.5</fadeInTime>
+    <fadeOutTime>2.5</fadeOutTime>
+    <solidTime>4</solidTime>
+  </FleckDef>
+
+</Defs>

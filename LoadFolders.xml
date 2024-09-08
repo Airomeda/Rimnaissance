@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loadFolders>
+  <v1.4>
+    <li>1.4</li>
+    <li>Common</li>
+    <li IfModActive="Ludeon.RimWorld.Royalty">Mods/Royalty</li>
+    <li IfModActive="CETeam.CombatExtended">Mods/CE</li>
+    <li IfModActive="CETeam.CombatExtended_copy">Mods/CE</li>
+    <li IfModActive="VanillaExpanded.VanillaTradingExpanded">Mods/VTE</li>
+  </v1.4>
+</loadFolders>

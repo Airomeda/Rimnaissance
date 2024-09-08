@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Mosaics Floor -->
+  <DesignatorDropdownGroupDef>
+    <defName>RNS_FloorMosaics</defName>
+    <label>mosaics floor</label>
+  </DesignatorDropdownGroupDef>
+
+</Defs>

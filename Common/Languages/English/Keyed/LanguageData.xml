@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    
+    <Rimnaissance.Name>Rimnaissance - Core</Rimnaissance.Name>
+
+    <Rimnaissance.WindPerform>Effective wind : {0}</Rimnaissance.WindPerform>
+    
+    <Rimnaissance.InsufficientWind>Not enough wind to operate.</Rimnaissance.InsufficientWind>
+
+    <Rimnaissance.MustBeAwayFromOtherStructures>Must be placed at least {1} cells away from other structures.</Rimnaissance.MustBeAwayFromOtherStructures>
+
+    <Rimnaissance.MustBeAwayFromOtherWindDevices>Must be placed at least {1} cells away from other {0}s.</Rimnaissance.MustBeAwayFromOtherWindDevices>
+
+    <Rimnaissance.PlaceOnlyOnTheWall>Must be placed on top of a wall.</Rimnaissance.PlaceOnlyOnTheWall>
+
+</LanguageData>

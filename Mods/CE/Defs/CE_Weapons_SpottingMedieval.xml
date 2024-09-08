@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Spyglass-->
+  <ThingDef ParentName="BaseMakeableGun">
+    <defName>RNS_Spyglass</defName>
+    <label>spyglass</label>
+    <description>A spyglass used for reconnaisance. Useful to coordinate artillery strikes.\n\nUsing this on a target will mark it, removing the indirect fire penalty from any artillery pieces targeting it. Additionally, any directed fire will use the aiming accuracy and efficiency of the spotter, rather than the artillery operator to determine final accuracy.</description>
+    <graphicData>
+      <texPath>Things/Equipment/Tool/Spyglass</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateAllowChance>0</generateAllowChance>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <Bulk>1</Bulk>
+      <Mass>2</Mass>
+      <SightsEfficiency>1.2</SightsEfficiency>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+				<verbClass>CombatExtended.Verb_MarkForArtillery</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Dummy</defaultProjectile>
+				<warmupTime>5.8</warmupTime>
+				<range>70</range>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+			</li>
+    </verbs>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+				<label>body</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.5</cooldownTime>
+				<armorPenetrationBlunt>2.0</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+			</li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <researchPrerequisite>RNS_MagnifyingGlass</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>30</Steel>
+      <WoodLog>60</WoodLog>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <relicChance>0</relicChance>
+    <weaponTags />
+    <uiIconScale>1.25</uiIconScale>
+    <!-- <modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawSize>0.85, 0.85</DrawSize>
+				<DrawOffset>0.0, 0.0</DrawOffset>
+			</li>
+		</modExtensions> -->
+  </ThingDef>
+
+</Defs>

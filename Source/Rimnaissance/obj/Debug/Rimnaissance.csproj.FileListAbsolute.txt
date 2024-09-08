@@ -1,0 +1,6 @@
+C:\Penyimpanan\RimWorld Mod Project\Rimnaissance - Core\Common\Assemblies\Rimnaissance.dll
+C:\Penyimpanan\RimWorld Mod Project\Rimnaissance - Core\Source\Rimnaissance\obj\Debug\Rimnaissance.csproj.AssemblyReference.cache
+C:\Penyimpanan\RimWorld Mod Project\Rimnaissance - Core\Source\Rimnaissance\obj\Debug\Rimnaissance.csproj.CoreCompileInputs.cache
+C:\Penyimpanan\RimWorld Mod Project\Rimnaissance - Core\Source\Rimnaissance\obj\Debug\Rimnaissance.dll
+C:\Penyimpanan\RimWorld Mod Project\Rimnaissance - Core\1.4\Assemblies\Rimnaissance.dll
+C:\Penyimpanan\RimWorld Mod Project\Rimnaissance - Core\Source\Rimnaissance\obj\Debug\Rimnaissance.csproj.CopyComplete

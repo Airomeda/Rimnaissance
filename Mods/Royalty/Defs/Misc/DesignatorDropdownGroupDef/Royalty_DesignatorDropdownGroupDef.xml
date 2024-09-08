@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Fine Mosaics Floor -->
+  <DesignatorDropdownGroupDef>
+    <defName>RNS_FloorFineMosaics</defName>
+    <label>fine mosaics floor</label>
+  </DesignatorDropdownGroupDef>
+
+</Defs>

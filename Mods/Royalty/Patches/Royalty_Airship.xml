@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- === Royalty Shuttle === -->
+  <Operation Class="VFECore.PatchOperationToggableSequence">
+    <enabled>True</enabled>
+    <label>Replace royalty shuttle with medieval equivalent : </label>
+    <operations>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shuttle"]/label</xpath>
+        <value>
+          <label>airship</label>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ShuttleCrashed"]/label</xpath>
+        <value>
+          <label>crashed airship</label>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shuttle"]/description</xpath>
+        <value>
+          <description>An aeroflight latest invention, the airship designed for transit between surface and orbit.</description>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shuttle"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Building/Misc/Airship</texPath>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Building/Misc/Airship</texPath>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ShuttleCrashed"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Building/Misc/CrashedAirship</texPath>
+        </value>
+      </li>
+
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Shuttle"]/graphicData/drawSize</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Shuttle"]/graphicData/drawSize</xpath>
+          <value>
+            <drawSize>(10, 6)</drawSize>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Shuttle"]/graphicData</xpath>
+          <value>
+            <drawSize>(10, 6)</drawSize>
+          </value>
+        </nomatch>
+      </li>
+
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/drawSize</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/drawSize</xpath>
+          <value>
+            <drawSize>(10, 6)</drawSize>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData</xpath>
+          <value>
+            <drawSize>(10, 6)</drawSize>
+          </value>
+        </nomatch>
+      </li>
+
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="ShuttleCrashed"]/graphicData/drawSize</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="ShuttleCrashed"]/graphicData/drawSize</xpath>
+          <value>
+            <drawSize>(10, 6)</drawSize>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="ShuttleCrashed"]/graphicData</xpath>
+          <value>
+            <drawSize>(10, 6)</drawSize>
+          </value>
+        </nomatch>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/WorldObjectDef[defName="TravelingShuttle"]/label</xpath>
+        <value>
+          <label>airship</label>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/WorldObjectDef[defName="TravelingShuttle"]/description</xpath>
+        <value>
+          <description>An airship in flight.</description>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/WorldObjectDef[defName="TravelingShuttle"]/expandingIconTexture</xpath>
+        <value>
+          <expandingIconTexture>World/WorldObjects/Expanding/TravelingAirship</expandingIconTexture>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+</Patch>

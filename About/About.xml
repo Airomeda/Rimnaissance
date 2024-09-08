@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ModMetaData>
+  <name>Rimnaissance: Core</name>
+  <description>A medieval-themed mod with the settings of Renaissance.</description>
+  <author>Airotsu</author>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <packageId>Airo.RimnaissanceCore</packageId>
+  <modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+    </li>
+	</modDependencies>
+  <loadBefore />
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>DankPyon.Medieval.Overhaul</li>
+    <li>CETeam.CombatExtended</li>
+    <li>VanillaExpanded.VanillaTradingExpanded</li>
+    <li>Ogam.Rimedieval</li>
+  </loadAfter>
+</ModMetaData>
