@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Water Bucket-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RNS_WaterBucket</defName>
+    <label>water bucket</label>
+    <description>A water bucket filled with water used to extinguish fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Tool/WaterBucket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <equippedAngleOffset>-30</equippedAngleOffset>
+    <statBases>
+      <Mass>10</Mass>
+      <AccuracyTouch>1.0</AccuracyTouch>
+      <AccuracyShort>0.98</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.92</AccuracyLong>
+      <RangedWeapon_Cooldown>3.27</RangedWeapon_Cooldown>
+      <WorkToMake>8000</WorkToMake>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RNS_Proj_Water</defaultProjectile>
+        <warmupTime>1.3</warmupTime>
+        <range>6</range>
+        <forcedMissRadius>0.4</forcedMissRadius>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>40</ticksBetweenBurstShots>
+        <soundCast>RNS_WaterSplash</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>bucket</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Anvil</li>
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Workbench</li>
+      </recipeUsers>
+      <researchPrerequisite>RNS_WaterExtinguisher</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <techLevel>Medieval</techLevel>
+    <relicChance>0.4</relicChance>
+    <weaponTags />
+    <uiIconScale>1.25</uiIconScale>
+  </ThingDef>
+
+  <!-- Water Projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RNS_Proj_Water</defName>
+    <label>water splash</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/WaterSplash</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <projectile>
+      <speed>24</speed>
+      <damageDef>RNS_WaterExtinguish</damageDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <explosionRadius>1.9</explosionRadius>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.1</shadowSize>
+      <screenShakeFactor>0</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+
+</Defs>

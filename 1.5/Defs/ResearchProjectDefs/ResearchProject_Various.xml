@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Water Extinguisher -->
+  <ResearchProjectDef>
+    <defName>RNS_WaterExtinguisher</defName>
+    <label>water extinguisher</label>
+    <description>Craft traditional fire extinguishing tool, pre-industrial.</description>
+    <baseCost>600</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Smithing</li>
+    </prerequisites>
+    <researchViewX>0.25</researchViewX>
+    <researchViewY>0.75</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->water extinguisher</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Craftmanship -->
+  <ResearchProjectDef>
+    <defName>RNS_Craftmanship</defName>
+    <label>intermediate craftmanship</label>
+    <description>basic craftmanship for improved productivity, pre-industrial.</description>
+    <baseCost>800</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Smithing</li>
+    </prerequisites>
+    <researchViewX>0.25</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->intermediate craftmanship</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Infirmary -->
+  <ResearchProjectDef>
+    <defName>RNS_Infirmary</defName>
+    <label>infirmary</label>
+    <description>medical treatment equipment for early hospital, pre-industrial.</description>
+    <baseCost>1000</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>ComplexFurniture</li>
+      <li>Smithing</li>
+    </prerequisites>
+    <researchViewX>1.25</researchViewX>
+    <researchViewY>0.75</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->infirmary</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Improved Temperature Regulation -->
+  <ResearchProjectDef>
+    <defName>RNS_ImprovedTemperatureRegulation</defName>
+    <label>improved temperature regulation</label>
+    <description>improved temperature regulation, pre-industrial.</description>
+    <baseCost>600</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Smithing</li>
+      <li>Stonecutting</li>
+      <li>PassiveCooler</li>
+    </prerequisites>
+    <researchViewX>1.25</researchViewX>
+    <researchViewY>1.875</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->improved temperature regulation</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Mosaics Work -->
+  <ResearchProjectDef>
+    <defName>RNS_MosaicsWork</defName>
+    <label>mosaics work</label>
+    <description>the art of creating images or pattern with an assemblage of small pieces of colored glass, stone, or other materials, pre-industrial.</description>
+    <baseCost>600</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Stonecutting</li>
+    </prerequisites>
+    <researchViewX>1.25</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->mosaics work</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Cartography -->
+  <ResearchProjectDef>
+    <defName>RNS_Cartography</defName>
+    <label>cartography</label>
+    <description>basic cartography to discover and record unknown land, pre-industrial.</description>
+    <baseCost>1500</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Smithing</li>
+    </prerequisites>
+    <researchViewX>2.25</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->cartography</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Alchemy -->
+  <ResearchProjectDef>
+    <defName>RNS_Alchemy</defName>
+    <label>alchemy</label>
+    <description>basic alchemy to conduct early chemistry, pre-industrial.</description>
+    <baseCost>1200</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Smithing</li>
+    </prerequisites>
+    <researchViewX>4.25</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->alchemy</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Intermediate Remedy -->
+  <ResearchProjectDef>
+    <defName>RNS_IntermediateRemedy</defName>
+    <label>intermediate remedy</label>
+    <description>a remedy that offers peculiar effects, brewed with a cauldron or alchemy instruments. pre-industrial.</description>
+    <baseCost>1600</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RNS_Alchemy</li>
+    </prerequisites>
+    <researchViewX>4.75</researchViewX>
+    <researchViewY>1.50</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->intermediate remedy</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Rimnaissance Invention -->
+  <ResearchProjectDef>
+    <defName>RNS_RimnaissanceInvention</defName>
+    <label>rimnaissance invention</label>
+    <description>the dawn of advanced knowledge invention from the great figure, pre-industrial.</description>
+    <baseCost>1450</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RNS_Alchemy</li>
+    </prerequisites>
+    <researchViewX>5.25</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->rimnaissance invention</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <!-- Entosomnia -->
+  <ResearchProjectDef>
+    <defName>RNS_Entosomnia</defName>
+    <label>entosomnia</label>
+    <description>basic preservation for indefinite suspension to living beings, pre-industrial.</description>
+    <baseCost>3000</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RNS_Alchemy</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>RNS_RimnaissanceInvention</li>
+    </hiddenPrerequisites>
+    <researchViewX>6.25</researchViewX>
+    <researchViewY>4.25</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->entosomnia</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+</Defs>

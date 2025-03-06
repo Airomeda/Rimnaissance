@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- === Water Extinguisher === -->
+
+  <!-- Water Vat -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RNS_WaterPopper</defName>
+    <label>water vat</label>
+    <description>A vat containing water which used to extinguish fire, rather ugly but slightly increase the cleanliness of a room. Once a flame is spotted around the vat, the water will evaporate and spray surrounding area.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/WaterPopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>2</drawSize>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <shadowData>
+        <volume>(0.35, 0.5, 0.35)</volume>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <size>(1, 1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.10</fillPercent>
+    <specialDisplayRadius>4.9</specialDisplayRadius>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>5</Cleanliness>
+      <Flammability>1.0</Flammability>
+      <Mass>2</Mass>
+      <MaxHitPoints>20</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RNS_WaterExtinguisher</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>RNS_WaterExtinguish</explosiveDamageType>
+        <startWickHitPointsPercent>-1</startWickHitPointsPercent>
+        <startWickOnDamageTaken>
+          <li>Flame</li>
+        </startWickOnDamageTaken>
+        <postExplosionSpawnThingDef>Filth_Water</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <explosionSound>RNS_WaterImpact</explosionSound>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerObject</useJob>
+        <useLabel>dump bucket</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_StartWick</compClass>
+      </li>
+      <li Class="CompProperties_ProximityFuse">
+        <target>Fire</target>
+        <radius>3</radius>
+      </li>
+    </comps>
+    <uiIconScale>0.9</uiIconScale>
+  </ThingDef>
+
+  <!-- === Cartography === -->
+
+  <!-- Courier Balloon -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RNS_CourierBalloon</defName>
+    <label>courier balloon</label>
+    <description>A courier balloon to carry various goods across the rim via balloon. n/n/Required for long distance trading, you can only sell goods to other factions if they're near a courier balloon.</description>
+    <thingClass>Building_OrbitalTradeBeacon</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/CourierBalloon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>4</drawSize>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <ignoreThingDrawColor>true</ignoreThingDrawColor>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.15</staticSunShadowHeight>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <size>(1, 1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>ItemImportant</altitudeLayer>
+    <fillPercent>0.50</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <blockWind>false</blockWind>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <paintable>false</paintable>
+    </building>
+    <statBases>
+      <Mass>5</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <WorkToBuild>2000</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <repairEffect>ConstructDirt</repairEffect>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RNS_Cartography</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,150,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>1.5</heatPerSecond>
+        <heatPushMinTemperature>23</heatPushMinTemperature>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>2.5</fuelConsumptionRate>
+        <fuelCapacity>30.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>0.4</fireSize>
+        <offset>(0, 0, 0.4)</offset>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowTradeBeaconRadius</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <specialDisplayRadius>7.9</specialDisplayRadius>
+  </ThingDef>
+
+  <!-- Cartography Table -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RNS_CartographyTable</defName>
+    <label>cartography table</label>
+    <description>Allows contact with other factions and orbital traders through written letters sent by messanger bird. Can be used to detect specific type of mineral across the planet, the chance to find a resource depends on the operator's. If you find a resource, you'll need to travel to collect it. Requires bird post</description>
+    <thingClass>Building_CommsConsole</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/CartographyTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>4</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <size>(3, 2)</size>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>false</blockWind>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
+    <interactionCellIcon>DiningChair</interactionCellIcon>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <Flammability>0.6</Flammability>
+      <Mass>15</Mass>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RNS_Cartography</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_LongRangeMineralScanner">
+        <scanSpeedStat>ResearchSpeed</scanSpeedStat>
+        <scanFindMtbDays>5</scanFindMtbDays>
+        <scanFindGuaranteedDays>10</scanFindGuaranteedDays>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>1</basePowerConsumption>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <!-- Bird Post -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RNS_BirdPost</defName>
+    <label>bird post</label>
+    <description>A bird post capable of sending messanger bird to a designated location before returning to their home roost. This allows for communication with neighboring factions, assuming one can afford the costly requirements of obtaining and training the bird, as well as feeding the animals with meat.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/BirdPost</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>3</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.8, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <size>(1, 1)</size>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.15</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <statBases>
+      <Cleanliness>-5</Cleanliness>
+      <Flammability>1.0</Flammability>
+      <Mass>5</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RNS_Cartography</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-1</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>2.5</fuelConsumptionRate>
+        <fuelCapacity>20.0</fuelCapacity>
+        <fuelFilter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+          <thingDefs>
+            <li>Hay</li>
+            <li>Kibble</li>
+          </thingDefs>
+        </fuelFilter>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <uiIconScale>0.8</uiIconScale>
+  </ThingDef>
+
+  <!-- === Entosomnia === -->
+
+  <!-- Entosomnic Casket -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RNS_EntosomnicCasket</defName>
+    <label>entosomnic casket</label>
+    <description>A self-preserving sarcophagus designed to keep a person in a suspended state for many years.</description>
+    <thingClass>Building_CryptosleepCasket</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <graphicData>
+      <texPath>Things/Building/Misc/EntosomnicCasket</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>3</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <size>(1, 2)</size>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>false</blockWind>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0, 1)</interactionCellOffset>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Ambrosia>7</Ambrosia>
+      <Gold>40</Gold>
+      <InsectJelly>100</InsectJelly>
+      <Silver>300</Silver>
+      <Steel>80</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RNS_Entosomnia</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_EmptyStateGraphic">
+        <graphicData>
+          <texPath>Things/Building/Misc/EntosomnicCasketOpen</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </graphicData>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_ContentsCasket</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- === Rimnaissance Invention === -->
+
+  <!-- Magnifying Monocle -->
+  <ThingDef ParentName="NobleHatMakeableBase">
+    <defName>RNS_MagnifyingMonocle</defName>
+    <label>magnifying monocle</label>
+    <description>A magnifier that helps the user aim accurately. It has an adjustable monocle thanks to the circular gold lining. It offers no protection at all, yet you will fight like a gentleman wearing one.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/MagnifyingMonoclePreview</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+      <Flammability>0.4</Flammability>
+      <Mass>1</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>12400</WorkToMake>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+      <SocialImpact>0.2</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.05</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/MagnifyingMonocle</wornGraphicPath>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups Inherit="False">
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags Inherit="False">
+        <li>RNS_MagnifyingMonocle</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>RNS_MagnifyingOptic</researchPrerequisite>
+      <recipeUsers>
+        <li>RNS_CraftingBench</li>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Anvil</li>
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Workbench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Steel>20</Steel>
+      <Gold>30</Gold>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+</Defs>

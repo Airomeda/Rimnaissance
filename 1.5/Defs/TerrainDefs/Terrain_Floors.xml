@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- === Mosaics Work === -->
+
+  <!-- Mosaics Floor -->
+  <TerrainDef Abstract="True" ParentName="FloorBase" Name="RNS_MosaicsBase">
+    <description>Carefully carved and laid floors, their round-like pattern is very beautiful to look at.</description>
+    <texturePath>Terrain/Surfaces/MosaicsFloor</texturePath>
+    <isPaintable>true</isPaintable>
+    <statBases>
+      <Beauty>5</Beauty>
+      <MarketValue>34</MarketValue>
+      <WorkToBuild>7000</WorkToBuild>
+    </statBases>
+    <designatorDropdown>RNS_FloorMosaics</designatorDropdown>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+    <researchPrerequisites>
+      <li>RNS_MosaicsWork</li>
+    </researchPrerequisites>
+    <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+    <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
+    <pollutionColor>(1, 1, 1, 1)</pollutionColor>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RNS_MosaicsBase">
+    <defName>RNS_MosaicsGranite</defName>
+    <label>granite mosaics</label>
+    <color>(105, 95, 97)</color>
+    <costList>
+      <BlocksGranite>10</BlocksGranite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RNS_MosaicsBase">
+    <defName>RNS_MosaicsLimestone</defName>
+    <label>limestone mosaics</label>
+    <color>(158, 153, 135)</color>
+    <costList>
+      <BlocksLimestone>10</BlocksLimestone>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RNS_MosaicsBase">
+    <defName>RNS_MosaicsMarble</defName>
+    <label>marble mosaics</label>
+    <color>(132, 135, 132)</color>
+    <costList>
+      <BlocksMarble>10</BlocksMarble>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RNS_MosaicsBase">
+    <defName>RNS_MosaicsSandstone</defName>
+    <label>sandstone mosaics</label>
+    <color>(126, 104, 94)</color>
+    <costList>
+      <BlocksSandstone>10</BlocksSandstone>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RNS_MosaicsBase">
+    <defName>RNS_MosaicsSlate</defName>
+    <label>slate mosaics</label>
+    <color>(100, 100, 100)</color>
+    <costList>
+      <BlocksSlate>10</BlocksSlate>
+    </costList>
+  </TerrainDef>
+
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Magnifying Optic Recipe -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RNS_MagnifyingMonocle"]/costList</xpath>
+          <value>
+            <DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
+          </value>
+        </li>
+
+        <!-- Glide Pack Recipe -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RNS_GlidePack"]/costList</xpath>
+          <value>
+            <DankPyon_ComponentBasic>4</DankPyon_ComponentBasic>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

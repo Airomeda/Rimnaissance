@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Magnifying Glass -->
+  <ResearchProjectDef>
+    <defName>RNS_MagnifyingGlass</defName>
+    <label>magnifying glass</label>
+    <description>magnifying glass used to zoom an object usually for craftmanship or reconnaissance, pre-industrial.</description>
+    <baseCost>500</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RNS_RimnaissanceInvention</li>
+    </prerequisites>
+    <researchViewX>7.25</researchViewX>
+    <researchViewY>1.875</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->magnifying glass</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+</Defs>

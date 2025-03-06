@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Rimnaissance Royalty Invention -->
+  <ResearchProjectDef>
+    <defName>RNS_MagnifyingOptic</defName>
+    <label>magnifying optic</label>
+    <description>magnifying optic to improve sight for various uses like monocle, pre-industrial.</description>
+    <baseCost>1500</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RNS_RimnaissanceInvention</li>
+    </prerequisites>
+    <researchViewX>9.25</researchViewX>
+    <researchViewY>1.5</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->magnifying optic</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RNS_GlidingEquipment</defName>
+    <label>gliding equipment</label>
+    <description>gliding equipment to let people fly for a short time, pre-industrial.</description>
+    <baseCost>2000</baseCost>
+    <tab>RNS_MedievalTab</tab>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RNS_RimnaissanceInvention</li>
+    </prerequisites>
+    <researchViewX>9.25</researchViewX>
+    <researchViewY>3.0</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->gliding equipment</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Local's CE Antiques I</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Ammo def consistency -->
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>CE Black Powder Bonus</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_FastMusketBall"]/ammoTypes</xpath>
+                <value>
+                  <ammoTypes>
+                    <Ammo_MusketBall>Bullet_FastMusketBall</Ammo_MusketBall>
+                    <Ammo_MusketBuckshot>Bullet_MusketBuckshot</Ammo_MusketBuckshot>
+                    <Ammo_MusketMinieBullet>Bullet_MinieBullet</Ammo_MusketMinieBullet>
+                  </ammoTypes>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_SlowMusketBall"]/ammoTypes</xpath>
+                <value>
+                  <ammoTypes>
+                    <Ammo_MusketBall>Bullet_SlowMusketBall</Ammo_MusketBall>
+                    <Ammo_MusketBuckshot>Bullet_SlowMusketBuckshot</Ammo_MusketBuckshot>
+                    <Ammo_MusketMinieBullet>Bullet_SlowMinieBullet</Ammo_MusketMinieBullet>
+                  </ammoTypes>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_FastMusketBallFull"]/ammoTypes/Ammo_MusketBuck</xpath>
+                <value>
+                  <Ammo_MusketBuckshot>Bullet_MusketBuckshot</Ammo_MusketBuckshot>
+                  <Ammo_MusketMinieBullet>Bullet_MinieBullet</Ammo_MusketMinieBullet>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_SlowMusketBallFull" or 
+                    defName="AmmoSet_CarbineMusketBallFull" or 
+                    defName="AmmoSet_CarbineMusketBallOld" or 
+                    defName="AmmoSet_65ballSlowMusket"]/ammoTypes/Ammo_MusketBuck</xpath>
+                <value>
+                  <Ammo_MusketBuckshot>Bullet_SlowMusketBuckshot</Ammo_MusketBuckshot>
+                </value>
+              </li>
+
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_SlowMusketBallFull"]/ammoTypes</xpath>
+                <value>
+                  <Ammo_MusketMinieBullet>Bullet_SlowMinieBullet</Ammo_MusketMinieBullet>
+                </value>
+              </li>
+
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_FastMusketBallOnly"]/ammoTypes</xpath>
+                <value>
+                  <Ammo_MusketMinieBullet>Bullet_MinieBullet</Ammo_MusketMinieBullet>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_58Old" or 
+                    defName="AmmoSet_65ballMusket" or 
+                    defName="AmmoSet_65ballMusketOld"]/ammoTypes/Ammo_MusketBuck</xpath>
+                <value>
+                  <Ammo_MusketBuckshot>Bullet_MusketBuckshot</Ammo_MusketBuckshot>
+                </value>
+              </li>
+
+            </operations>
+          </match>
+        </li>
+        
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

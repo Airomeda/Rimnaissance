@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Alpha Vehicles - Neolithic</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Change turret type to proper one -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleTurretDef[defName="AV_Hwacha_Turret"]/turretType</xpath>
+          <value>
+            <turretType>Rotatable</turretType>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
