@@ -162,7 +162,11 @@
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <fillPercent>0.2</fillPercent>
     <passability>PassThroughOnly</passability>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <clearBuildingArea>false</clearBuildingArea>
     <building>
+      <paintable>false</paintable>
       <isEdifice>false</isEdifice>
     </building>
     <statBases>
