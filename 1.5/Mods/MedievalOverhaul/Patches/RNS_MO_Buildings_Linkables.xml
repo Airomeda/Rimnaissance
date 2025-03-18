@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Linkables -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNS_InfirmaryBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+      <li>DankPyon_RusticEndTable</li>
+      <li>DankPyon_RusticDresser</li>
+      <li>DankPyon_RusticCloset</li>
+      <li>DankPyon_RusticCloset1x2c</li>
+      <li>DankPyon_RusticChest</li>
+      <li>DankPyon_RoyalEndTable</li>
+      <li>DankPyon_RoyalDresser</li>
+      <li>DankPyon_RoyalCloset</li>
+      <li>DankPyon_RoyalChest</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNS_CraftingBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+      <li>DankPyon_ToolRack</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNS_Smeltorium"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+      <li>DankPyon_Grinder</li>
+      <li>DankPyon_Bellows</li>
+      <li>DankPyon_QuenchingBucket</li>
+      <li>DankPyon_ToolRack</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNS_AlchemyRefinery"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+      <li>DankPyon_HerbTable</li>
+      <li>DankPyon_VialsTable</li>
+      <li>DankPyon_Alembic</li>
+    </value>
+  </Operation>
+
+</Patch>

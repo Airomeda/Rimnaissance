@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- === Mosaics Work === -->
+
+  <!-- Mosaics Floor -->
+  <TerrainDef ParentName="RNS_MosaicsBase">
+    <defName>RNS_MosaicsClay</defName>
+    <label>clay mosaics</label>
+    <color>(132, 99, 81)</color>
+    <costList>
+      <DankPyon_BlocksClay>10</DankPyon_BlocksClay>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RNS_FineMosaicsBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>RNS_FineMosaicsClay</defName>
+    <label>clay fine mosaics</label>
+    <color>(132, 99, 81)</color>
+    <costList>
+      <DankPyon_BlocksClay>15</DankPyon_BlocksClay>
+    </costList>
+  </TerrainDef>
+
+</Defs>

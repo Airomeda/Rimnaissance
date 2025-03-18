@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Herb Incenser Recipe -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RNS_HerbIncenser"]/costList/Steel</xpath>
+    <value>
+      <DankPyon_IronIngot>50</DankPyon_IronIngot>
+    </value>
+  </Operation>
+
+  <!-- Washing Bucket Recipe -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RNS_WashingBucket"]/costList/Steel</xpath>
+    <value>
+      <DankPyon_IronIngot>30</DankPyon_IronIngot>
+    </value>
+  </Operation>
+
+  <!-- Courier Balloon Recipe -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNS_CourierBalloon"]/costList</xpath>
+    <value>
+      <DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+
+  <!-- Cartography Table Recipe -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RNS_CartographyTable"]/costList</xpath>
+    <value>
+      <DankPyon_ComponentBasic>2</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+
+</Patch>
