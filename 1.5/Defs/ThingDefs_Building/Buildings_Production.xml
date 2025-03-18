@@ -76,7 +76,6 @@
       <li Class="RecipeInheritance.ThingDefExtension">
         <inheritRecipesFrom>
           <li>CraftingSpot</li>
-          <li MayRequire="Dankpyon.Medieval.Overhaul">DankPyon_Workbench</li>
         </inheritRecipesFrom>
       </li>
     </modExtensions>
