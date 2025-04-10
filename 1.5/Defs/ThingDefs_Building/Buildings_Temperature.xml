@@ -11,7 +11,6 @@
     <graphicData>
       <texPath>Things/Building/Misc/ImprovedPassiveCooler</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
       <drawSize>1</drawSize>
       <drawRotated>false</drawRotated>
       <allowFlip>false</allowFlip>
@@ -93,7 +92,6 @@
     <graphicData>
       <texPath>Things/Building/Misc/StonyHeater</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
       <drawSize>2</drawSize>
       <drawRotated>false</drawRotated>
       <allowFlip>false</allowFlip>
@@ -142,6 +140,10 @@
         <glowRadius>3</glowRadius>
         <glowColor>(255,150,100,0)</glowColor>
       </li>
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>0.4</fireSize>
+        <offset>(0, 0, -0.25)</offset>
+      </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
         <heatPerSecond>15</heatPerSecond>
@@ -161,7 +163,6 @@
     </comps>
     <placeWorkers>
       <li>PlaceWorker_Heater</li>
-      <li>PlaceWorker_GlowRadius</li>
     </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>

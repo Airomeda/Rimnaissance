@@ -146,10 +146,8 @@
     <description>Increases medical tend quality and immunity gain speed when placed directly adjacent to a infirmary beds or normal beds. Attaching more than one medical incenser to the same bed will have no effect. Must be regularly refilled.</description>
     <graphicData>
       <texPath>Things/Building/Medical/HerbIncenser</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>2</drawSize>
-      <drawRotated>false</drawRotated>
-      <allowFlip>false</allowFlip>
       <shadowData>
         <volume>(0.65, 1, 0.65)</volume>
       </shadowData>
@@ -157,7 +155,7 @@
     <drawerType>RealtimeOnly</drawerType>
     <tickerType>Normal</tickerType>
     <size>(1, 1)</size>
-    <rotatable>false</rotatable>
+    <rotatable>true</rotatable>
     <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <fillPercent>0.2</fillPercent>
